@@ -4,7 +4,7 @@ Este projeto busca explorar a integração poderosa entre o Docker e o ROS 2 Fox
 
 ## Pré-requisitos
 
-Antes de começar, certifique-se de ter o Docker instalado em sua máquina. Você pode fazer o download e seguir as instruções de instalação no [site oficial do Docker](https://www.docker.com/get-started).
+Antes de começar, certifique-se de ter o Docker instalado em sua máquina. Você pode fazer o download e seguir as instruções de instalação no [site oficial do Docker](https://www.docker.com/get-started) e configura-lo para posibilitar a utilizaçãp da GPU dentro da imagem.
 
 ## Como Usar
 
@@ -54,8 +54,6 @@ Descrição da função 3 e como executá-la.
 ```bash
 comando-para-executar-funcao-3
 ```
-
-Lembre-se de substituir `nome-da-imagem` pelo nome que você escolheu para a imagem Docker e ajustar os comandos das funções conforme necessário.
 
 ## Integrantes
 
