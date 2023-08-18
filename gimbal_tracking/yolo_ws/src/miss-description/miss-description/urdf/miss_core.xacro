@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+    <xacro:include filename="inertial_macros.xacro"/>
+
+    <material name="white">
+        <color rgba="1 1 1 1" />
+    </material>
+
+    <material name="orange">
+        <color rgba="1 0.3 0.1 1"/>
+    </material>
+
+    <material name="blue">
+        <color rgba="0.2 0.2 1 1"/>
+    </material>
+
+    <material name="yellow">
+        <color rgba="0.255 0.128 0.128 1"/>
+    </material>
+
+    <material name="black">
+        <color rgba="0 0 0 1"/>
+    </material>
+
+
+    <!-- BASE LINK -->
+
+    <link name="base_link">
+
+    </link>
+    
+
+    <!-- CHASSIS LINK -->
+
+    <link name="chassis">
+        <visual>
+            <origin xyz="0.275 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find miss-description)/urdf/meshes/miss_chassis_covered_low.stl"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin  xyz="0.275 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="file://$(find miss-description)/urdf/meshes/miss_chassis_covered_low.stl"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="5" x="0.455" y="0.4" z="0.263"> <!-- mass in kg, length and radius in meters (To Be Measured) -->
+            <origin xyz="0.183 0 -.1" rpy="0 0 ${pi}"/>
+        </xacro:inertial_box>
+    </link>
+    
+
+        <!-- CHASSIS JOINT -->
+
+    <joint name="chassis_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="chassis"/>
+        <origin xyz="-0.487 0 0"/>
+    </joint>
+
+
+       <!-- LEFT REAR WHEEL LINK -->
+
+       <link name="left_rear_wheel">
+        <visual>
+            <geometry>
+                <mesh filename="file://$(find miss-description)/urdf/meshes/miss_wheel.dae"/>
+            </geometry>
+            <origin rpy="${pi/2} 0 0" />
+        </visual>
+        <collision>
+            <origin rpy="${pi/2} 0 0" />
+            <material name="black"/>
+            <geometry>
+                <mesh filename="file://$(find miss-description)/urdf/meshes/miss_wheel.dae"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="2.5" length="0.07" radius="0.105"> <!-- mass in kg, length and radius in meters (To Be Measured) -->
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <!-- LEFT REAR WHEEL JOINT  -->
+
+    <joint name="left_rear_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="left_rear_wheel"/>
+        <origin xyz="-0.411 ${0.38/2 + 0.04} 0" rpy="-${pi/2} 0 0" />
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    
+    
+    <!-- RIGHT REAR WHEEL LINK -->
+
+    <link name="right_rear_wheel">
+        <visual>
+            <geometry>
+                <mesh filename="file://$(find miss-description)/urdf/meshes/miss_wheel.dae"/>
+            </geometry>
+            <origin rpy="-${pi/2} 0 0" />
+        </visual>
+        <collision>
+            <origin rpy="-${pi/2} 0 0" />
+            <material name="black"/>
+            <geometry>
+                <mesh filename="file://$(find miss-description)/urdf/meshes/miss_wheel.dae"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="2.5" length="0.07" radius="0.105"> <!-- mass in kg, length and radius in meters (To Be Measured) -->
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+        <!-- RIGHT REAR WHEEL JOINT  -->
+
+    <joint name="right_rear_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="right_rear_wheel"/>
+        <origin xyz="-0.411 -${0.38/2 + 0.04} 0" rpy="${pi/2} 0 0" />
+        <axis xyz="0 0 -1"/>
+    </joint>
+
+
+    <!-- LEFT FRONT WHEEL LINK -->
+
+    <link name="left_front_wheel">
+        <visual>
+            <geometry>
+                <mesh filename="file://$(find miss-description)/urdf/meshes/miss_wheel.dae"/>
+            </geometry>
+            <origin rpy="${pi/2} 0 0" />
+        </visual>
+        <collision>
+            <origin rpy="${pi/2} 0 0" />
+            <material name="black"/>
+            <geometry>
+                <mesh filename="file://$(find miss-description)/urdf/meshes/miss_wheel.dae"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="2.5" length="0.07" radius="0.105"> <!-- mass in kg, length and radius in meters (To Be Measured) -->
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+        <!-- LEFT FRONT WHEEL JOINT  -->
+
+    <joint name="left_front_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="left_front_wheel"/>
+        <origin xyz="0 ${0.38/2 + 0.04} 0" rpy="-${pi/2} 0 0" />
+        <axis xyz="0 0 1"/>
+    </joint>
+
+
+    <!-- RIGHT FRONT WHEEL LINK -->
+
+    <link name="right_front_wheel">
+        <visual>
+            <geometry>
+                <mesh filename="file://$(find miss-description)/urdf/meshes/miss_wheel.dae"/>
+            </geometry>
+            <origin rpy="-${pi/2} 0 0" />
+        </visual>
+        <collision>
+            <origin rpy="-${pi/2} 0 0" />
+            <material name="black"/>
+            <geometry>
+                <mesh filename="file://$(find miss-description)/urdf/meshes/miss_wheel.dae"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="2.5" length="0.07" radius="0.105"> <!-- mass in kg, length and radius in meters (To Be Measured) -->
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+        <!-- RIGHT FRONT WHEEL JOINT  -->
+
+    <joint name="right_front_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="right_front_wheel"/>
+        <origin xyz="0 -${0.38/2 + 0.04}  0" rpy="${pi/2} 0 0" />
+        <axis xyz="0 0 -1"/>
+    </joint>
+       
+ 
+</robot>

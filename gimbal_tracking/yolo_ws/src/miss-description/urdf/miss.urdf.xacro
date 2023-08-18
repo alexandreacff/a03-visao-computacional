@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="miss">
+
+    <xacro:include filename="miss_core.xacro" />
+
+    <!-- <xacro:include filename="gazebo_control.xacro" /> -->
+
+    <xacro:include filename="ros2_control.xacro" />
+
+    <!-- <xacro:include filename="miss_rear_wheels.xacro" /> -->
+
+    <xacro:include filename="lidar.xacro" />
+
+    <xacro:include filename="_d435.urdf.xacro" />
+
+    <xacro:include filename="imu.xacro" />
+    
+</robot>
