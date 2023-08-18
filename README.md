@@ -1,6 +1,6 @@
-# Trabalho Utilizando Docker
+# Integração de Docker e ROS 2 Foxy para Realização de Person Tracking com Câmera RealSense Acoplada em Gimbal
 
-Este repositório contém o código e os recursos necessários para executar um projeto utilizando Docker. O Docker é uma plataforma de código aberto que automatiza a implantação, o dimensionamento e a administração de aplicativos em contêineres. Isso proporciona um ambiente consistente para desenvolvimento, teste e implantação, garantindo que o aplicativo funcione da mesma forma em diferentes ambientes.
+Este projeto busca explorar a integração poderosa entre o Docker e o ROS 2 Foxy, a fim de criar um sistema avançado de person tracking utilizando uma câmera RealSense acoplada a um gimbal. A combinação dessas tecnologias permite a criação de um ambiente consistente, isolado e facilmente reproduzível, enquanto aproveita os recursos avançados do ROS 2 para controle e processamento de dados em tempo real.
 
 ## Pré-requisitos
 
