@@ -1,12 +1,16 @@
 # Resumo
 Realizamos um fine-tunning no modelo pré-treinado YOLO-NAS, que é uma arquitetura de rede neural que apresenta melhores métricas que o YOLOv8 na tarefa de detecção de objetos.
 # Dataset
-Para realizar o fine-tunning, realizmamos um treinamento sobre um modelo pré-treinado. Para isso criamos um dataset novo, que contêm as bounding-boxes e a classes que representa a imagem (0 para não queda e 1 para queda). Para melhor treinamento, realizamos, também, um data augmentation.
+Para realizar o fine-tunning, realizamos um treinamento sobre o modelo pré-treinado. Para isso criamos um dataset novo, que contêm as bounding-boxes e a classes que representa a imagem (0 para não queda e 1 para queda). Para melhor desempenho, aumentamos nosso dataset(data augmentation) realizando cropping nas imagens no pré-processamento.
 
 # Modelo
 Utilizamos o YOLO-NAS l, que é o de maior quantidade de parâmetros dentre os modelos YOLO-NAS, e que apresenta melhor desempenho.
 Importamos o modelo através da biblioteca SuperGradients e o treinamos em cima do nosso dataset. Salvamos, ao longo das épocas, o modelo que está sendo treinado , e escolhemos o que possuir 
 melhor performance.
+
+# Resultados
+
+Treinamos por 10 épocas e obtivemos 60 % de sei lá o que
 
 # Referências:
 Baseamos nossa implementação no link a seguir. Para mais informações sobre como foi feito o detector de quedas acesse-o:
