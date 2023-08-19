@@ -29,31 +29,7 @@ Siga as etapas abaixo para executar o projeto utilizando Docker:
    ./container_sh
    ```
 
-Agora você está dentro do contêiner Docker e pode executar as funções do projeto. Abaixo estão as funções disponíveis:
-
-### Função 1
-
-Descrição da função 1 e como executá-la.
-
-```bash
-comando-para-executar-funcao-1
-```
-
-### Função 2
-
-Descrição da função 2 e como executá-la.
-
-```bash
-comando-para-executar-funcao-2
-```
-
-### Função 3
-
-Descrição da função 3 e como executá-la.
-
-```bash
-comando-para-executar-funcao-3
-```
+Agora você está dentro do contêiner Docker e pode executar as funções do projeto.
 
 ## Integrantes
 
