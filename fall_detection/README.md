@@ -10,7 +10,7 @@ melhor performance.
 
 # Resultados
 
-Treinamos por 10 épocas e obtivemos 60 % de sei lá o que
+Treinamos por 10 épocas.
 
 # Referências:
 Baseamos nossa implementação no link a seguir. Para mais informações sobre como foi feito o detector de quedas acesse-o:
