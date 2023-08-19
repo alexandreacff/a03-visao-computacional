@@ -13,7 +13,7 @@ Siga as etapas abaixo para executar o projeto utilizando Docker:
 1. Clone este repositório para a sua máquina local:
 
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/alexandreacff/a03-visao-computacional.git
+   git clone https://github.com/alexandreacff/a03-visao-computacional.git
    cd a03-visao-computacional
    ```
 
