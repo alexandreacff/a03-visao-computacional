@@ -26,7 +26,7 @@ Siga as etapas abaixo para executar o projeto utilizando Docker:
 3. Execute um contêiner a partir da imagem criada:
 
    ```bash
-   ./container_sh
+   ./container.sh
    ```
 
 Agora você está dentro do contêiner Docker e pode executar as funções do projeto.
